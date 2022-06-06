@@ -271,11 +271,17 @@ void ochDeleteAll(void)
 		pOchDel = pOch;
 		pOch = pOch->pNext;
 		if(pOchDel->pszName != NULL)
+		        {
 			free(pOchDel->pszName);
+			}
 		if(pOchDel->pszFileTemplate != NULL)
+			{
 			free(pOchDel->pszFileTemplate);
+			}	
 		if(pOchDel->cmdOnSizeLimit != NULL)
+			{
 			free(pOchDel->cmdOnSizeLimit);
+			}
 		free(pOchDel);
 	}
 }
